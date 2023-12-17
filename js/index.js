@@ -15,7 +15,7 @@ btn.addEventListener("click",()=>{
     // Convert city name into latitude & longitude
     // Using GEOCODING API
 
-    var geocodingapi="http://api.openweathermap.org/geo/1.0/direct?q="+city+"&appid=2d832386bcecddb6796e5d4b5c6e799d";
+    var geocodingapi="http://api.openweathermap.org/geo/1.0/direct?q="+city+"&appid=ccde0925f653acf2dead8f26655b8dca";
     fetch(geocodingapi).then((response)=>{
         return response.json();
     }).then((latlon)=>{
@@ -41,7 +41,7 @@ btn.addEventListener("click",()=>{
     function latlondata(data)
     {
         // to give the latitude and longitude for the given location
-        url="https://api.openweathermap.org/data/2.5/weather?lat="+data[0].lat+"&lon="+data[0].lon+"&appid=2d832386bcecddb6796e5d4b5c6e799d&units=metric";
+        url="https://api.openweathermap.org/data/2.5/weather?lat="+data[0].lat+"&lon="+data[0].lon+"&appid=ccde0925f653acf2dead8f26655b8dca&units=metric";
         fetch(url)
         .then((response)=>{
             // you need to return this data otherwise undifined data will be displayed on output
