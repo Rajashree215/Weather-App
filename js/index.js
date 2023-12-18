@@ -15,7 +15,7 @@ btn.addEventListener("click",()=>{
     // Convert city name into latitude & longitude
     // Using GEOCODING API
 
-    var geocodingapi="http://api.openweathermap.org/geo/1.0/direct?q="+city+"&appid=ccde0925f653acf2dead8f26655b8dca";
+    var geocodingapi="https://api.openweathermap.org/geo/1.0/direct?q="+city+"&appid=ccde0925f653acf2dead8f26655b8dca";
     fetch(geocodingapi).then((response)=>{
         return response.json();
     }).then((latlon)=>{
@@ -68,8 +68,6 @@ btn.addEventListener("click",()=>{
         h6.innerHTML="";
         div.id="card";
         img.src="http://openweathermap.org/img/w/"+info.weather[0].icon+".png";
-        // img.height="40";
-        // img.width="40";
         div.appendChild(img);
         h6.innerHTML+=info.weather[0].description;
         h6.style.display="inline";

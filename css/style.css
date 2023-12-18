@@ -31,6 +31,7 @@ h1{
     border: .17px solid grey;
     color: #000;
     text-shadow: none;
+    outline: none;
 }
 #txt:hover
 {
